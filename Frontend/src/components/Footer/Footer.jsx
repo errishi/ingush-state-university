@@ -1,4 +1,9 @@
 import React from 'react'
+import FacebookIcon from '@mui/icons-material/Facebook';
+import XIcon from '@mui/icons-material/X';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -40,7 +45,7 @@ const Footer = () => {
                 <a href="tel:+79253490320" className="hover:text-yellow-400 transition">+7 (925) 349-03-20</a>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-lg">✉️</span>
+                <span className="text-lg"><EmailIcon /></span>
                 <a href="mailto:info@unefly.com" className="hover:text-yellow-400 transition">info@unefly.com</a>
               </div>
             </div>
@@ -51,16 +56,16 @@ const Footer = () => {
             <h3 className="text-white text-lg font-bold mb-4">Follow Us</h3>
             <div className="flex gap-4">
               <a href="#" className="hover:text-yellow-400 transition text-sm font-semibold" title="Facebook">
-                f
+                <FacebookIcon />
               </a>
               <a href="#" className="hover:text-yellow-400 transition text-sm font-semibold" title="Twitter">
-                𝕏
+                <XIcon />
               </a>
               <a href="#" className="hover:text-yellow-400 transition text-sm font-semibold" title="Instagram">
-                📷
+                <InstagramIcon />
               </a>
               <a href="#" className="hover:text-yellow-400 transition text-sm font-semibold" title="LinkedIn">
-                in
+                <LinkedInIcon />
               </a>
             </div>
           </div>

@@ -23,17 +23,33 @@ const Navbar = () => {
     }
   }, [location.hash])
 
+  // Handle search
+  const handleSearch = (e) => {
+    e.preventDefault()
+    if (searchQuery.trim()) {
+      // Navigate to search results page with query parameter
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`
+      setSearchQuery('')
+    }
+  }
+
+  // Handle Enter key press in search input
+  const handleSearchKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch(e)
+    }
+  }
+
   const topNavLinks = [
     { label: 'TESTING CENTER', href: '#' },
     { label: 'EIOS', href: '#' },
-    { label: 'USEFUL INFORMATION', href: '#' },
-    { label: 'EDUCATIONAL ACTIVITIES', href: '#' },
+    { label: 'USEFUL INFORMATION', href: '/information-for-applicants' },
+    { label: 'EDUCATIONAL ACTIVITIES', href: '/educational-activity' },
     { label: 'CONTACTS', href: '/contact-us' }
   ]
 
   const mainNavLinks = [
     { label: 'HOME', href: '/' },
-    { label: 'NEWS', href: '/news' },
     { 
       label: 'INFORMATION ABOUT THE EDUCATIONAL ORGANIZATION', 
       href: '#',
@@ -83,18 +99,22 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           {/* Search Bar */}
           <div className="flex-1 max-w-md">
-            <div className="relative">
+            <form onSubmit={handleSearch} className="relative">
               <input
                 type="text"
                 placeholder="Search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={handleSearchKeyPress}
                 className="w-full px-4 py-2 bg-white text-gray-800 rounded-sm text-sm focus:outline-none"
               />
-              <button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 text-lg">
+              <button 
+                type="submit"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 text-lg hover:text-gray-800 transition cursor-pointer"
+              >
                 🔍
               </button>
-            </div>
+            </form>
           </div>
 
           {/* Top Navigation Links */}

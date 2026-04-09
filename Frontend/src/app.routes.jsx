@@ -1,12 +1,15 @@
 import { createBrowserRouter } from "react-router";
 import Layout from "./Layout";
 import Home from "./Pages/Home";
-import News from "./Pages/News";
 import Structure from "./Pages/Structure";
 import ScientificActivity from "./Pages/ScientificActivity";
 import ContactUs from "./Pages/ContactUs";
 import AboutUs from "./Pages/AboutUs";
 import Applicant from "./Pages/Applicant";
+import NotFound from "./Pages/NotFound";
+import InformationForApplicants from "./Pages/InformationForApplicants";
+import EducationalActivity from "./Pages/EducationalActivity";
+import SearchResults from "./Pages/SearchResults";
 
 const router = createBrowserRouter([
     {
@@ -16,10 +19,6 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />
-            },
-            {
-                path: "/news",
-                element: <News />
             },
             {
                 path: "/scientific-activity",
@@ -40,6 +39,22 @@ const router = createBrowserRouter([
             {
                 path: "/applicant",
                 element: <Applicant />
+            },
+            {
+                path: "/information-for-applicants",
+                element: <InformationForApplicants />
+            },
+            {
+                path: "/educational-activity",
+                element: <EducationalActivity />
+            },
+            {
+                path: "/search",
+                element: <SearchResults />
+            },
+            {
+                path: "/*",
+                element: <NotFound />
             }
         ]
     }
