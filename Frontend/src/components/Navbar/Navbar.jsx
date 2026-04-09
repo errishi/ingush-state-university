@@ -142,7 +142,9 @@ const Navbar = () => {
       <div className="bg-linear-to-r from-blue-800 to-blue-800">
         <div className="max-w-7xl mx-auto px-4 py-8 flex justify-center items-center gap-8">
           {/* Logo */}
+          <Link to="/">
             <img src="logo.svg" className='w-45 h-45' alt="logo" />
+          </Link>
 
           {/* University Info */}
           <div className="text-white text-center">
