@@ -105,12 +105,12 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Section 1: Main Carousel Banner */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-6 sm:py-12">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4">
           <div className="relative">
             {/* Carousel Container */}
             <div 
-              className={`rounded-3xl overflow-hidden shadow-2xl relative h-120 flex items-center justify-center transition-all duration-500`}
+              className={`rounded-lg sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl relative h-48 sm:h-72 lg:h-120 flex items-center justify-center transition-all duration-500`}
               style={{
                 backgroundImage: carouselSlides[currentCarouselIndex].image 
                   ? `url(${carouselSlides[currentCarouselIndex].image})`
@@ -131,11 +131,11 @@ const Home = () => {
               <div className="absolute bottom-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full translate-x-1/2 translate-y-1/2 z-0"></div>
 
               {/* Content */}
-              <div className="text-center z-20 px-8 relative">
-                <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
+              <div className="text-center z-20 px-4 sm:px-8 relative">
+                <h2 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white mb-2 sm:mb-6 drop-shadow-lg">
                   {carouselSlides[currentCarouselIndex].title}
                 </h2>
-                <p className="text-white text-xl font-semibold max-w-2xl mx-auto drop-shadow">
+                <p className="text-white text-xs sm:text-base lg:text-lg xl:text-xl font-semibold max-w-2xl mx-auto drop-shadow">
                   {carouselSlides[currentCarouselIndex].subtitle}
                 </p>
               </div>
@@ -143,30 +143,30 @@ const Home = () => {
               {/* Left Arrow */}
               <button
                 onClick={handleCarouselPrev}
-                className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 hover:bg-blue-600 hover:text-white transition-all shadow-lg hover:shadow-xl z-30"
+                className="absolute left-2 sm:left-6 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-3 hover:bg-blue-600 hover:text-white transition-all shadow-lg hover:shadow-xl z-30"
               >
-                <ChevronLeft size={28} />
+                <ChevronLeft size={16} className="sm:w-7 sm:h-7" />
               </button>
 
               {/* Right Arrow */}
               <button
                 onClick={handleCarouselNext}
-                className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 hover:bg-blue-600 hover:text-white transition-all shadow-lg hover:shadow-xl z-30"
+                className="absolute right-2 sm:right-6 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-3 hover:bg-blue-600 hover:text-white transition-all shadow-lg hover:shadow-xl z-30"
               >
-                <ChevronRight size={28} />
+                <ChevronRight size={16} className="sm:w-7 sm:h-7" />
               </button>
             </div>
 
             {/* Carousel Dots */}
-            <div className="flex justify-center gap-3 mt-8">
+            <div className="flex justify-center gap-2 sm:gap-3 mt-4 sm:mt-8">
               {carouselSlides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentCarouselIndex(index)}
                   className={`rounded-full transition-all ${
                     index === currentCarouselIndex 
-                      ? 'bg-blue-600 w-8 h-3' 
-                      : 'bg-gray-300 w-3 h-3 hover:bg-gray-400'
+                      ? 'bg-blue-600 w-6 sm:w-8 h-2 sm:h-3' 
+                      : 'bg-gray-300 w-2 h-2 hover:bg-gray-400'
                   }`}
                 />
               ))}
@@ -176,30 +176,30 @@ const Home = () => {
       </section>
 
       {/* Section 2: Latest News */}
-      <section className="py-20 bg-linear-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-12 sm:py-20 bg-linear-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4">
           {/* Section Title */}
-          <div className="mb-16">
+          <div className="mb-8 sm:mb-16">
             <div className="relative inline-block w-full">
-              <h2 className="text-3xl font-extrabold text-center text-white bg-linear-to-r from-blue-900 to-blue-700 py-3 rounded-2xl shadow-xl">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-center text-white bg-linear-to-r from-blue-900 to-blue-700 py-2 sm:py-3 rounded-lg sm:rounded-2xl shadow-xl">
                 Latest News
               </h2>
             </div>
           </div>
 
           {/* News Carousel */}
-          <div className="relative px-12">
-            <div className="flex gap-6 overflow-hidden">
-              {newsItems.slice(currentNewsIndex, currentNewsIndex + 4).map((news, idx) => {
+          <div className="relative px-3 sm:px-12">
+            <div className="flex gap-3 sm:gap-6 overflow-hidden">
+              {newsItems.slice(currentNewsIndex, currentNewsIndex + Math.ceil(window.innerWidth < 640 ? 1.5 : window.innerWidth < 1024 ? 2 : 4)).map((news, idx) => {
                 const isImageIcon = typeof news.icon === 'string'
                 const IconComponent = !isImageIcon ? news.icon : null
                 
                 return (
-                  <div key={news.id} className="shrink-0 w-1/4 min-w-max group">
+                  <div key={news.id} className="shrink-0 w-full sm:w-1/2 lg:w-1/4 group">
                     <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col border border-gray-200">
                       
                       {/* News Image Placeholder */}
-                      <div className="bg-linear-to-br from-blue-500 to-blue-700 w-80 h-50 flex items-center justify-center relative overflow-hidden flex-1">
+                      <div className="bg-linear-to-br from-blue-500 to-blue-700 w-full h-40 sm:h-48 flex items-center justify-center relative overflow-hidden flex-1">
                         {isImageIcon ? (
                           <img 
                             src={news.icon} 
@@ -229,28 +229,28 @@ const Home = () => {
             {/* Navigation Arrows */}
             <button
               onClick={handleNewsPrev}
-              className="absolute -left-2 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-10"
+              className="absolute left-0 sm:-left-3 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-1 sm:p-2 shadow-lg hover:shadow-xl transition-all z-10"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft size={16} className="sm:w-6 sm:h-6" />
             </button>
             <button
               onClick={handleNewsNext}
-              className="absolute -right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2 shadow-lg hover:shadow-xl transition-all z-10"
+              className="absolute right-0 sm:-right-3 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-1 sm:p-2 shadow-lg hover:shadow-xl transition-all z-10"
             >
-              <ChevronRight size={24} />
+              <ChevronRight size={16} className="sm:w-6 sm:h-6" />
             </button>
           </div>
 
           {/* News Pagination Dots */}
-          <div className="flex justify-center gap-2 mt-10">
+          <div className="flex justify-center gap-1 sm:gap-2 mt-6 sm:mt-10">
             {Array.from({ length: Math.max(0, newsItems.length - 3) }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentNewsIndex(index)}
                 className={`rounded-full transition-all ${
                   index === currentNewsIndex 
-                    ? 'bg-blue-600 w-8 h-2' 
-                    : 'bg-gray-300 w-2 h-2 hover:bg-gray-400'
+                    ? 'bg-blue-600 w-6 sm:w-8 h-1.5 sm:h-2' 
+                    : 'bg-gray-300 w-1.5 sm:w-2 h-1.5 sm:h-2 hover:bg-gray-400'
                 }`}
               />
             ))}
@@ -259,45 +259,45 @@ const Home = () => {
       </section>
 
       {/* Section 3: Quick Links */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <section className="py-12 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
             {quickLinks.map((link) => {
               const IconComponent = link.icon
               return (
                 <div
                   key={link.id}
-                  className={`${link.bgColor} rounded-2xl shadow-lg p-10 border-t-4 border-blue-900`}
+                  className={`${link.bgColor} rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-10 border-t-4 border-blue-900`}
                 >
                   {/* Icon */}
-                  <div className={`${link.accentColor} mb-6`}>
-                    <IconComponent size={64} strokeWidth={2} />
+                  <div className={`${link.accentColor} mb-4 sm:mb-6`}>
+                    <IconComponent size={48} strokeWidth={2} className="sm:w-16 sm:h-16" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-extrabold text-blue-900 mb-8">
+                  <h3 className="text-lg sm:text-2xl font-extrabold text-blue-900 mb-4 sm:mb-8">
                     {link.title}
                   </h3>
 
                   {/* Links */}
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-2 sm:space-y-4 mb-6 sm:mb-8">
                     {link.links.map((item, index) => (
                       <li 
                         key={index} 
-                        className="text-blue-900 font-semibold cursor-pointer hover:text-gray-900 flex items-center"
+                        className="text-blue-900 font-semibold cursor-pointer hover:text-gray-900 flex items-start text-sm sm:text-base"
                       >
-                        <span className="mr-2">
-                          <ArrowRight size={16} />
+                        <span className="mr-2 mt-0.5 flex-shrink-0">
+                          <ArrowRight size={14} className="sm:w-4 sm:h-4" />
                         </span>
-                        {item}
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Read More Button */}
-                  <button className="w-full bg-linear-to-r from-blue-600 to-blue-700 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center gap-2">
+                  <button className="w-full bg-linear-to-r from-blue-600 to-blue-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full flex items-center justify-center gap-2 text-sm sm:text-base">
                     Read more
-                    <ArrowRight size={16} />
+                    <ArrowRight size={14} className="sm:w-4 sm:h-4" />
                   </button>
                 </div>
               )

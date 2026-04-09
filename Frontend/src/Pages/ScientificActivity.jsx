@@ -6,18 +6,18 @@ const ScientificActivity = () => {
     <div className="min-h-screen bg-white">
       {/* Breadcrumb Navigation */}
       <div className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center gap-2 text-gray-600">
-            <a href="/" className="text-blue-600 hover:text-blue-700 font-medium">Ingush State University</a>
-            <ChevronRight size={18} className="text-gray-400" />
-            <span className="text-gray-400">Scientific activity</span>
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
+          <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600 overflow-auto">
+            <a href="/" className="text-blue-600 hover:text-blue-700 font-medium whitespace-nowrap">IngSU</a>
+            <ChevronRight size={14} className="sm:w-5 sm:h-5 text-gray-400 flex-shrink-0" />
+            <span className="text-gray-400 whitespace-nowrap">Scientific activity</span>
           </div>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Sidebar - Table of Contents */}
           <div className="lg:col-span-1">
             <div className="bg-white sticky top-20">
@@ -48,11 +48,11 @@ const ScientificActivity = () => {
           {/* Main Content Area */}
           <div className="lg:col-span-3">
             {/* Title */}
-            <h1 className="text-5xl font-bold text-gray-800 mb-8 font-serif">Research activities of IngSU</h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 sm:mb-8 font-serif">Research activities of IngSU</h1>
 
             {/* Overview Section */}
-            <section id="overview" className="mb-12">
-              <p className="text-gray-700 text-lg leading-relaxed mb-6 text-justify">
+            <section id="overview" className="mb-8 sm:mb-12">
+              <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6 text-justify">
                 The development of university research is a pressing issue in contemporary Russian higher education. Its relevance stems from the need to prepare competitive graduates, as well as the current priority of state policy in higher education, which aims to integrate higher education, science, industry, and business.
               </p>
             </section>

@@ -62,7 +62,7 @@ const InformationForApplicants = () => {
 
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <h1 className="text-5xl font-bold text-gray-800 mb-12 font-serif">Useful information</h1>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 sm:mb-12 font-serif">Useful information</h1>
 
         {/* Information Items */}
         <div className="space-y-6">

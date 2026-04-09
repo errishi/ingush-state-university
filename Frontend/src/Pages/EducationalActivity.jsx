@@ -85,7 +85,7 @@ const EducationalActivity = () => {
 
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <h1 className="text-5xl font-bold text-gray-800 mb-16 font-serif">Educational activities</h1>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-8 sm:mb-16 font-serif">Educational activities</h1>
 
         {/* Educational Programs Section */}
         <div className="mb-16">

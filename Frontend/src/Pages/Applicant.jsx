@@ -190,7 +190,7 @@ const Applicant = () => {
       {/* Hero Section */}
       <section className="bg-linear-to-r from-blue-900 to-blue-700 py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-extrabold text-white mb-6">Welcome Future Students</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-6">Welcome Future Students</h1>
           <p className="text-blue-100 text-xl max-w-3xl mx-auto">
             Join thousands of successful students at Ingush State University. Discover programs, requirements, and start your academic journey today.
           </p>
@@ -220,7 +220,7 @@ const Applicant = () => {
       {/* Application Process */}
       <section id="process" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-16">Application Process</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 text-center mb-8 sm:mb-16">Application Process</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {applicationSteps.map((item) => (
@@ -241,7 +241,7 @@ const Applicant = () => {
       {/* Requirements Section */}
       <section id="requirements" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-16">Admission Requirements</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 text-center mb-8 sm:mb-16">Admission Requirements</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {requirements.map((req, index) => (
@@ -262,7 +262,7 @@ const Applicant = () => {
       {/* Programs Section */}
       <section id="programs" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-16">Program Categories</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 text-center mb-8 sm:mb-16">Program Categories</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {programs.map((prog, index) => (
@@ -286,7 +286,7 @@ const Applicant = () => {
       {/* Scholarships Section */}
       <section id="scholarships" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-16">Available Scholarships</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 text-center mb-8 sm:mb-16">Available Scholarships</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {scholarships.map((scholarship, index) => (
@@ -315,7 +315,7 @@ const Applicant = () => {
       {/* Important Dates */}
       <section id="dates" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-16">Important Dates 2026</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 text-center mb-8 sm:mb-16">Important Dates 2026</h2>
           
           <div className="max-w-3xl mx-auto">
             <div className="space-y-4">
@@ -336,7 +336,7 @@ const Applicant = () => {
       {/* FAQ Section */}
       <section id="faqs" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-16">Frequently Asked Questions</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 text-center mb-8 sm:mb-16">Frequently Asked Questions</h2>
           
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq) => (
@@ -365,7 +365,7 @@ const Applicant = () => {
       {/* Contact & CTA Section */}
       <section className="py-16 bg-linear-to-r from-blue-900 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-extrabold text-white mb-6">Ready to Apply?</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3 sm:mb-6">Ready to Apply?</h2>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
             Have questions? Our admissions team is ready to help you with any inquiries about programs, requirements, or scholarships.
           </p>

@@ -53,7 +53,7 @@ const ContactUs = () => {
       {/* Hero Section */}
       <section className="bg-linear-to-r from-gray-900 to-gray-700 py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-extrabold text-white mb-4">Contact Us</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-2 sm:mb-4">Contact Us</h1>
           <p className="text-gray-300 text-xl">We're here to help and answer any question you might have</p>
         </div>
       </section>

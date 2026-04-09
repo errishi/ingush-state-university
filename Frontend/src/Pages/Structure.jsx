@@ -101,8 +101,8 @@ const Structure = () => {
 
       {/* Page Header */}
       <div className="bg-linear-to-r from-blue-50 to-indigo-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 py-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-3">University Structure</h1>
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-12">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 sm:mb-3">University Structure</h1>
           <p className="text-gray-600 text-lg">
             Ingush State University comprises 11 faculties and institutes dedicated to academic excellence and research advancement.
           </p>
