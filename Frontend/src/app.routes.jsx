@@ -6,6 +6,7 @@ import Structure from "./Pages/Structure";
 import ScientificActivity from "./Pages/ScientificActivity";
 import ContactUs from "./Pages/ContactUs";
 import AboutUs from "./Pages/AboutUs";
+import Applicant from "./Pages/Applicant";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: "/about-us",
                 element: <AboutUs />
+            },
+            {
+                path: "/applicant",
+                element: <Applicant />
             }
         ]
     }

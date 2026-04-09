@@ -1,10 +1,27 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router'
+import React, { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router'
 import { ChevronDown } from 'lucide-react'
+
+// Utility function to scroll to section
+const scrollToSection = (id) => {
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
 
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [openDropdown, setOpenDropdown] = useState(null)
+  const location = useLocation()
+
+  // Handle smooth scrolling when hash changes
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '')
+      setTimeout(() => scrollToSection(id), 100)
+    }
+  }, [location.hash])
 
   const topNavLinks = [
     { label: 'TESTING CENTER', href: '#' },
@@ -24,38 +41,37 @@ const Navbar = () => {
         { label: 'About University', href: '/about-us' },
         { label: 'History', href: '/about-us#history' },
         { label: 'Mission & Vision', href: '/about-us#mission' },
-        { label: 'Administration', href: '#' },
-        { label: 'Accreditation', href: '#' }
+        { label: 'Administration', href: '/about-us#accreditions' },
+        { label: 'Accreditation', href: '/about-us#accreditions' }
       ]
     },
     { 
       label: 'SCIENTIFIC ACTIVITY', 
       href: '/scientific-activity',
       submenu: [
-        { label: 'Research Centers', href: '#' },
-        { label: 'Publications', href: '#' },
-        { label: 'Conferences', href: '#' },
-        { label: 'Grants', href: '#' }
+        { label: 'Research Overview', href: '/scientific-activity#overview' },
+        { label: 'Strategic Goals', href: '/scientific-activity#goals' },
+        { label: 'Research Areas', href: '/scientific-activity#research-areas' },
+        { label: 'Publications', href: '/scientific-activity#goals' }
       ]
     },
     { 
       label: 'STRUCTURE', 
       href: '/structure',
       submenu: [
-        { label: 'Faculties', href: '#' },
-        { label: 'Departments', href: '#' },
-        { label: 'Administrative Office', href: '#' },
-        { label: 'Support Services', href: '#' }
+        { label: 'Faculties', href: '/structure#faculties' },
+        { label: 'Administrative', href: '/structure#administrative' },
+        { label: 'Support Services', href: '/structure#support' }
       ]
     },
     { 
       label: 'TO THE APPLICANT', 
-      href: '#',
+      href: '/applicant',
       submenu: [
-        { label: 'Admission Requirements', href: '#' },
-        { label: 'Application Process', href: '#' },
-        { label: 'Scholarships', href: '#' },
-        { label: 'Programs', href: '#' }
+        { label: 'Application Process', href: '/applicant#process' },
+        { label: 'Requirements', href: '/applicant#requirements' },
+        { label: 'Programs', href: '/applicant#programs' },
+        { label: 'Scholarships', href: '/applicant#scholarships' }
       ]
     }
   ]
@@ -84,13 +100,19 @@ const Navbar = () => {
           {/* Top Navigation Links */}
           <div className="flex gap-6 ml-8 items-center">
             {topNavLinks.map((link, index) => (
-              <Link
+              <a
                 key={index}
-                to={link.href}
+                href={link.href}
+                onClick={(e) => {
+                  if (link.href.startsWith('#')) {
+                    e.preventDefault()
+                    scrollToSection(link.href.replace('#', ''))
+                  }
+                }}
                 className="text-yellow-400 text-sm font-semibold hover:text-yellow-300 transition whitespace-nowrap"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -140,15 +162,43 @@ const Navbar = () => {
                     }`}
                   >
                     <div className="py-2">
-                      {link.submenu.map((item, subIndex) => (
-                        <Link
-                          key={subIndex}
-                          to={item.href}
-                          className="block px-6 py-3 text-white text-sm hover:bg-blue-600 hover:text-yellow-300 transition border-l-4 border-transparent hover:border-blue-400"
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
+                      {link.submenu.map((item, subIndex) => {
+                        // Check if item.href contains a hash (anchor link)
+                        const isAnchorLink = item.href.includes('#')
+                        const handleClick = (e) => {
+                          if (isAnchorLink) {
+                            e.preventDefault()
+                            const [path, id] = item.href.split('#')
+                            if (path === '' || path === '/about-us' || location.pathname === path) {
+                              scrollToSection(id)
+                            } else {
+                              // Navigate to page first, then scroll
+                              window.location.href = item.href
+                            }
+                            setOpenDropdown(null)
+                          }
+                        }
+
+                        return isAnchorLink ? (
+                          <a
+                            key={subIndex}
+                            href={item.href}
+                            onClick={handleClick}
+                            className="block px-6 py-3 text-white text-sm hover:bg-blue-600 hover:text-yellow-300 transition border-l-4 border-transparent hover:border-blue-400 cursor-pointer"
+                          >
+                            {item.label}
+                          </a>
+                        ) : (
+                          <Link
+                            key={subIndex}
+                            to={item.href}
+                            onClick={() => setOpenDropdown(null)}
+                            className="block px-6 py-3 text-white text-sm hover:bg-blue-600 hover:text-yellow-300 transition border-l-4 border-transparent hover:border-blue-400"
+                          >
+                            {item.label}
+                          </Link>
+                        )
+                      })}
                     </div>
                   </div>
                 )}

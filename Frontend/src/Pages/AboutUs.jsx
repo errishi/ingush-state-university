@@ -190,7 +190,7 @@ const AboutUs = () => {
       </section>
 
       {/* Accreditations */}
-      <section className="py-20 bg-white">
+      <section id='accreditions' className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-16">Accreditations & Recognition</h2>
           
