@@ -119,7 +119,7 @@ const SearchResults = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
           <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600 overflow-auto">
             <Link to="/" className="text-blue-600 hover:text-blue-700 font-medium whitespace-nowrap">Ingush State</Link>
-            <ChevronRight size={14} className="sm:w-5 sm:h-5 text-gray-400 flex-shrink-0" />
+            <ChevronRight size={14} className="sm:w-5 sm:h-5 text-gray-400 shrink-0" />
             <span className="text-gray-400 whitespace-nowrap">Search Results</span>
           </div>
         </div>
@@ -182,7 +182,7 @@ const SearchResults = () => {
                         </span>
                       </div>
                       
-                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-700 group-hover:text-blue-800 transition mb-1 sm:mb-2 break-words">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-700 group-hover:text-blue-800 transition mb-1 sm:mb-2 wrap-break-word">
                         {result.title}
                       </h3>
                       
@@ -207,7 +207,7 @@ const SearchResults = () => {
             <div className="bg-gray-50 rounded-lg p-6 sm:p-12 text-center mb-8 sm:mb-12">
               <Search size={32} className="sm:w-12 sm:h-12 mx-auto text-gray-400 mb-3 sm:mb-4" />
               <h2 className="text-lg sm:text-2xl font-bold text-gray-800 mb-2">No results found</h2>
-              <p className="text-gray-600 text-sm sm:text-base lg:text-lg mb-3 sm:mb-6 break-words">
+              <p className="text-gray-600 text-sm sm:text-base lg:text-lg mb-3 sm:mb-6 wrap-break-word">
                 We couldn't find anything matching "<span className="font-semibold">{query}</span>"
               </p>
               <p className="text-gray-600 text-sm sm:text-base mb-6 sm:mb-8">
@@ -224,10 +224,10 @@ const SearchResults = () => {
                   to={item.link}
                   className="group block bg-white border border-gray-200 rounded-lg p-4 sm:p-6 hover:border-blue-600 hover:shadow-lg transition"
                 >
-                  <h4 className="text-base sm:text-lg font-bold text-blue-700 group-hover:text-blue-800 mb-2 break-words">
+                  <h4 className="text-base sm:text-lg font-bold text-blue-700 group-hover:text-blue-800 mb-2 wrap-break-word">
                     {item.title}
                   </h4>
-                  <p className="text-gray-600 text-xs sm:text-sm break-words">
+                  <p className="text-gray-600 text-xs sm:text-sm wrap-break-word">
                     {item.description}
                   </p>
                 </Link>

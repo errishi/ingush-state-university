@@ -141,11 +141,11 @@ const Navbar = () => {
       </div>
 
       {/* University Banner */}
-      <div className="bg-gradient-to-r from-blue-800 to-blue-800">
+      <div className="bg-linear-to-r from-blue-800 to-blue-800">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
           <div className="flex flex-col sm:flex-row justify-center sm:justify-start items-center gap-4 sm:gap-8">
             {/* Logo */}
-            <Link to="/" className="flex-shrink-0">
+            <Link to="/" className="shrink-0">
               <img src="logo.svg" className='w-12 h-12 sm:w-20 lg:w-32 sm:h-20 lg:h-32' alt="logo" />
             </Link>
 
@@ -258,7 +258,7 @@ const Navbar = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-white hover:bg-blue-600 p-2 rounded transition flex-shrink-0"
+            className="text-white hover:bg-blue-600 p-2 rounded transition shrink-0"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

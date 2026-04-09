@@ -286,7 +286,7 @@ const Home = () => {
                         key={index} 
                         className="text-blue-900 font-semibold cursor-pointer hover:text-gray-900 flex items-start text-sm sm:text-base"
                       >
-                        <span className="mr-2 mt-0.5 flex-shrink-0">
+                        <span className="mr-2 mt-0.5 shrink-0">
                           <ArrowRight size={14} className="sm:w-4 sm:h-4" />
                         </span>
                         <span>{item}</span>

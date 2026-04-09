@@ -9,7 +9,7 @@ const ScientificActivity = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
           <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600 overflow-auto">
             <a href="/" className="text-blue-600 hover:text-blue-700 font-medium whitespace-nowrap">IngSU</a>
-            <ChevronRight size={14} className="sm:w-5 sm:h-5 text-gray-400 flex-shrink-0" />
+            <ChevronRight size={14} className="sm:w-5 sm:h-5 text-gray-400 shrink-0" />
             <span className="text-gray-400 whitespace-nowrap">Scientific activity</span>
           </div>
         </div>
