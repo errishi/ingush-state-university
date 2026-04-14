@@ -179,10 +179,16 @@ const Structure = () => {
                         <div className="bg-white rounded p-4 border border-blue-200">
                           <h4 className="font-bold text-gray-800 mb-3">Contact & Info</h4>
                           <p className="text-gray-600 text-sm mb-2">
-                            <strong>Office:</strong> Main Building, Floor 3
+                            <strong>Address:</strong> Millionschikova Street, Dom13K1. Moscow - Russia
                           </p>
-                          <p className="text-gray-600 text-sm mb-4">
-                            <strong>Phone:</strong> +7 (8732) XXX-XX-XX
+                          <p className="text-gray-600 text-sm mb-2">
+                            <strong>Phone Number:</strong> +7 (925) 349-03-20
+                          </p>
+                          <p className="text-gray-600 text-sm mb-2">
+                            <strong>Email Address:</strong> info@unefly.com
+                          </p>
+                          <p className="text-gray-600 text-sm mb-4 whitespace-pre-line">
+                            <strong>Working Hours:</strong>{'\n'}Monday - Friday: 8:00 AM - 6:00 PM{"\n"}Saturday: 10:00 AM - 2:00 PM
                           </p>
                           <Link to="/contact-us" className="w-full px-10 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition font-medium">
                             Learn More
