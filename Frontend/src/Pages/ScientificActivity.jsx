@@ -1,5 +1,6 @@
 import React from 'react'
 import { ChevronRight } from 'lucide-react'
+import { Link } from 'react-router'
 
 const ScientificActivity = () => {
   return (
@@ -8,7 +9,7 @@ const ScientificActivity = () => {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
           <div className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-600 overflow-auto">
-            <a href="/" className="text-blue-600 hover:text-blue-700 font-medium whitespace-nowrap">IngSU</a>
+            <Link to="/" className="text-blue-600 hover:text-blue-700 font-medium whitespace-nowrap">IngSU</Link>
             <ChevronRight size={14} className="sm:w-5 sm:h-5 text-gray-400 shrink-0" />
             <span className="text-gray-400 whitespace-nowrap">Scientific activity</span>
           </div>
@@ -23,24 +24,24 @@ const ScientificActivity = () => {
             <div className="bg-white sticky top-20">
               <h3 className="text-lg font-bold text-gray-800 mb-6 pb-4 border-b-2 border-blue-600">Contents</h3>
               <nav className="space-y-3">
-                <a href="#overview" className="block text-blue-600 hover:text-blue-700 font-medium transition">
+                <Link to="#overview" className="block text-blue-600 hover:text-blue-700 font-medium transition">
                   Research Overview
-                </a>
-                <a href="#strategy" className="block text-gray-600 hover:text-blue-600 transition">
+                </Link>
+                <Link to="#strategy" className="block text-gray-600 hover:text-blue-600 transition">
                   Research Strategy
-                </a>
-                <a href="#goals" className="block text-gray-600 hover:text-blue-600 transition">
+                </Link>
+                <Link to="#goals" className="block text-gray-600 hover:text-blue-600 transition">
                   Strategic Goals
-                </a>
-                <a href="#institution" className="block text-gray-600 hover:text-blue-600 transition">
+                </Link>
+                <Link to="#institution" className="block text-gray-600 hover:text-blue-600 transition">
                   University's Role
-                </a>
-                <a href="#research-areas" className="block text-gray-600 hover:text-blue-600 transition">
+                </Link>
+                <Link to="#research-areas" className="block text-gray-600 hover:text-blue-600 transition">
                   Research Areas
-                </a>
-                <a href="#foundation" className="block text-gray-600 hover:text-blue-600 transition">
+                </Link>
+                <Link to="#foundation" className="block text-gray-600 hover:text-blue-600 transition">
                   Scientific Foundation
-                </a>
+                </Link>
               </nav>
             </div>
           </div>

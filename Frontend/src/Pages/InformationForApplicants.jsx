@@ -1,5 +1,6 @@
 import React from 'react'
 import { ChevronRight, FileText, Users, Calendar, Mail, Download, AlertCircle } from 'lucide-react'
+import { Link } from 'react-router'
 
 const InformationForApplicants = () => {
   const informationItems = [
@@ -53,7 +54,7 @@ const InformationForApplicants = () => {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center gap-2 text-gray-600">
-            <a href="/" className="text-blue-600 hover:text-blue-700 font-medium">Ingush State University</a>
+            <Link to="/" className="text-blue-600 hover:text-blue-700 font-medium">Ingush State University</Link>
             <ChevronRight size={18} className="text-gray-400" />
             <span className="text-gray-400">Useful information</span>
           </div>
@@ -152,9 +153,9 @@ const InformationForApplicants = () => {
             <p className="text-gray-600 text-sm mb-4">
               Find contact information for all departments and faculties.
             </p>
-            <a href="/structure" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+            <Link to="/structure" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
               View Structure →
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -165,18 +166,18 @@ const InformationForApplicants = () => {
             Our support team is available to assist you with any information you need.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact-us"
+            <Link
+              to="/contact-us"
               className="bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition"
             >
               Contact Us
-            </a>
-            <a
-              href="/applicant"
+            </Link>
+            <Link
+              to="/applicant"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-bold py-3 px-8 rounded-lg transition"
             >
               Apply Now
-            </a>
+            </Link>
           </div>
         </div>
       </div>

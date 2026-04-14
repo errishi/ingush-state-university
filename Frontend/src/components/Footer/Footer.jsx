@@ -4,6 +4,7 @@ import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import { Link } from 'react-router';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -25,11 +26,11 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="/" className="hover:text-yellow-400 transition">Home</a></li>
-              <li><a href="/contact-us" className="hover:text-yellow-400 transition">Contact Us</a></li>
-              <li><a href="/about-us" className="hover:text-yellow-400 transition">About Us</a></li>
-              <li><a href="/scientific-activity" className="hover:text-yellow-400 transition">Scientific Activity</a></li>
-              <li><a href="/structure" className="hover:text-yellow-400 transition">Structure</a></li>
+              <li><Link to="/" className="hover:text-yellow-400 transition">Home</Link></li>
+              <li><Link to="/contact-us" className="hover:text-yellow-400 transition">Contact Us</Link></li>
+              <li><Link to="/about-us" className="hover:text-yellow-400 transition">About Us</Link></li>
+              <li><Link to="/scientific-activity" className="hover:text-yellow-400 transition">Scientific Activity</Link></li>
+              <li><Link to="/structure" className="hover:text-yellow-400 transition">Structure</Link></li>
             </ul>
           </div>
 

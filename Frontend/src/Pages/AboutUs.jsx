@@ -209,24 +209,6 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-linear-to-r from-blue-900 to-blue-700">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3 sm:mb-6">Ready to Join Us?</h2>
-          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            Discover how Ingush State University can transform your future and help you achieve your dreams.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition">
-              Apply Now
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-bold py-3 px-8 rounded-lg transition">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

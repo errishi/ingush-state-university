@@ -1,5 +1,6 @@
 import React from 'react'
 import { ChevronRight, BookOpen, Users, Calendar, Award, ClipboardList, Accessibility, GraduationCap } from 'lucide-react'
+import { Link } from 'react-router'
 
 const EducationalActivity = () => {
   const educationalPrograms = [
@@ -76,7 +77,7 @@ const EducationalActivity = () => {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center gap-2 text-gray-600">
-            <a href="/" className="text-blue-600 hover:text-blue-700 font-medium">Ingush State University</a>
+            <Link to="/" className="text-blue-600 hover:text-blue-700 font-medium">Ingush State University</Link>
             <ChevronRight size={18} className="text-gray-400" />
             <span className="text-gray-400">Educational activities</span>
           </div>
@@ -134,9 +135,9 @@ const EducationalActivity = () => {
             {schedules.map((schedule) => {
               const IconComponent = schedule.icon
               return (
-                <a
+                <Link
                   key={schedule.id}
-                  href={schedule.link}
+                  to={schedule.link}
                   className="group block"
                 >
                   <div className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-600 hover:shadow-lg transition h-full flex flex-col">
@@ -159,7 +160,7 @@ const EducationalActivity = () => {
                       <ChevronRight size={18} className="ml-2" />
                     </div>
                   </div>
-                </a>
+                </Link>
               )
             })}
           </div>
@@ -284,18 +285,18 @@ const EducationalActivity = () => {
             Our educational advisors are ready to help you understand our programs and opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact-us"
+            <Link
+              to="/contact-us"
               className="bg-white text-blue-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition"
             >
               Contact Us
-            </a>
-            <a
-              href="/applicant"
+            </Link>
+            <Link
+              to="/applicant"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-bold py-3 px-8 rounded-lg transition"
             >
               Apply Today
-            </a>
+            </Link>
           </div>
         </div>
       </div>

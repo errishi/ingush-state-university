@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Phone, Mail, MapPin, Send, Clock, Globe } from 'lucide-react'
+import { toast } from 'react-toastify'
 
 const ContactUs = () => {
+  const [result, setResult] = useState('')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,11 +17,34 @@ const ContactUs = () => {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
-  }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+    formData.append("access_key", "4c311795-a1eb-43fd-a134-3374c3130a1a");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+      event.target.reset();
+      toast.success('Your enquiry has been submitted successfully!')
+    } else {
+      setResult("Error");
+      toast.error('Failed to submit enquiry. Please try again.')
+    }
+  };
 
   const contactInfo = [
     {
@@ -133,6 +158,7 @@ const ContactUs = () => {
                     onChange={handleInputChange}
                     placeholder="+7 (999) 999-99-99"
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition"
+                    required
                   />
                 </div>
 
@@ -167,7 +193,7 @@ const ContactUs = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-lg transition flex items-center justify-center gap-2"
+                  className="w-full cursor-pointer bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-lg transition flex items-center justify-center gap-2"
                 >
                   <Send size={20} />
                   Send Message

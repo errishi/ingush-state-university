@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { ChevronRight, Users, BookOpen, Beaker, Calculator, Globe, Briefcase, Building2 } from 'lucide-react'
+import { Link } from 'react-router'
 
 const Structure = () => {
   const [expandedFaculty, setExpandedFaculty] = useState(null)
@@ -90,9 +91,9 @@ const Structure = () => {
       <div className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center gap-2 text-gray-600">
-            <a href="/" className="text-blue-600 hover:text-blue-700 font-medium">Ingush State University</a>
+            <Link to="/" className="text-blue-600 hover:text-blue-700 font-medium">Ingush State University</Link>
             <ChevronRight size={18} className="text-gray-400" />
-            <a href="/about-us" className="text-blue-600 hover:text-blue-700 font-medium">About the university</a>
+            <Link to="/about-us" className="text-blue-600 hover:text-blue-700 font-medium">About the university</Link>
             <ChevronRight size={18} className="text-gray-400" />
             <span className="text-gray-400">Faculties</span>
           </div>
@@ -183,9 +184,9 @@ const Structure = () => {
                           <p className="text-gray-600 text-sm mb-4">
                             <strong>Phone:</strong> +7 (8732) XXX-XX-XX
                           </p>
-                          <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition font-medium">
+                          <Link to="/contact-us" className="w-full px-10 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition font-medium">
                             Learn More
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Users, BookOpen, GraduationCap, Building2, ArrowRight } from 'lucide-react'
+import ImageSection1 from '../components/Home/ImageSection1'
 
 const Home = () => {
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0)
@@ -305,6 +306,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <ImageSection1 />
     </div>
   )
 }

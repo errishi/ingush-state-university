@@ -122,9 +122,9 @@ const Navbar = () => {
           {/* Top Navigation Links */}
           <div className="hidden lg:flex gap-2 lg:gap-4 xl:gap-6 items-center ml-0 lg:ml-8">
             {topNavLinks.map((link, index) => (
-              <a
+              <Link
                 key={index}
-                href={link.href}
+                to={link.href}
                 onClick={(e) => {
                   if (link.href.startsWith('#')) {
                     e.preventDefault()
@@ -134,7 +134,7 @@ const Navbar = () => {
                 className="text-yellow-400 text-xs lg:text-sm font-semibold hover:text-yellow-300 transition whitespace-nowrap"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -204,14 +204,14 @@ const Navbar = () => {
                         }
 
                         return isAnchorLink ? (
-                          <a
+                          <Link
                             key={subIndex}
-                            href={item.href}
+                            to={item.href}
                             onClick={handleClick}
                             className="block px-6 py-3 text-white text-sm hover:bg-blue-600 hover:text-yellow-300 transition border-l-4 border-transparent hover:border-blue-400 cursor-pointer"
                           >
                             {item.label}
-                          </a>
+                          </Link>
                         ) : (
                           <Link
                             key={subIndex}
@@ -317,14 +317,14 @@ const Navbar = () => {
                       }
 
                       return isAnchorLink ? (
-                        <a
+                        <Link
                           key={subIndex}
-                          href={item.href}
+                          to={item.href}
                           onClick={handleClick}
                           className="block px-6 py-2 text-white text-sm hover:bg-blue-600 hover:text-yellow-300 transition border-l-4 border-transparent hover:border-blue-400"
                         >
                           {item.label}
-                        </a>
+                        </Link>
                       ) : (
                         <Link
                           key={subIndex}
@@ -344,9 +344,9 @@ const Navbar = () => {
             {/* Mobile Top Nav Links */}
             <div className="border-t border-gray-700 py-2">
               {topNavLinks.map((link, index) => (
-                <a
+                <Link
                   key={index}
-                  href={link.href}
+                  to={link.href}
                   onClick={(e) => {
                     if (link.href.startsWith('#')) {
                       e.preventDefault()
@@ -357,7 +357,7 @@ const Navbar = () => {
                   className="block px-4 py-2 text-yellow-400 text-sm font-semibold hover:text-yellow-300 transition"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
