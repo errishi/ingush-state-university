@@ -7,7 +7,7 @@ const ImageSection1 = () => {
 
   return (
     <section className="py-6 sm:py-8 lg:py-10">
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-5 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-5 px-4 sm:px-6 lg:px-8">
         <div className="grid w-full grid-cols-1 gap-5 lg:grid-cols-[1.3fr_1fr]">
           <article className="relative h-32 overflow-hidden rounded-2xl shadow-[0_8px_24px_rgba(15,23,42,0.12)] sm:h-40 lg:h-44">
             <img
@@ -28,7 +28,7 @@ const ImageSection1 = () => {
           </article>
         </div>
 
-        <article className="relative h-40 w-full max-w-xl overflow-hidden shadow-[0_10px_28px_rgba(15,23,42,0.18)] sm:h-48">
+        <article className="relative h-40 w-full max-w-md overflow-hidden shadow-[0_10px_28px_rgba(15,23,42,0.18)] sm:h-48">
           <img
             src={bottomImage}
             alt="Student design bureau banner"

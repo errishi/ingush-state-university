@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, Users, BookOpen, GraduationCap, Building2, A
 import ImageSection1 from '../components/Home/ImageSection1'
 import ImageSection2 from '../components/Home/ImageSection2'
 import { Link } from 'react-router'
+import ImageSection3 from '../components/Home/ImageSection3'
 
 const Home = () => {
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0)
@@ -315,6 +316,7 @@ const Home = () => {
 
       <ImageSection1 />
       <ImageSection2 />
+      <ImageSection3 />
     </div>
   )
 }
