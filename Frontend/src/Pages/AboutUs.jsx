@@ -3,37 +3,37 @@ import { Award, Users, BookOpen, Globe, Target, Zap } from 'lucide-react'
 
 const AboutUs = () => {
   const stats = [
-    { icon: Users, label: 'Students', value: '5,000+' },
-    { icon: BookOpen, label: 'Programs', value: '50+' },
-    { icon: Award, label: 'Faculty Members', value: '300+' },
-    { icon: Globe, label: 'International Partners', value: '25+' }
+    { icon: Users, label: 'Enrolled students', value: '5,000+' },
+    { icon: BookOpen, label: 'Academic programs', value: '50+' },
+    { icon: Award, label: 'Faculty members', value: '300+' },
+    { icon: Globe, label: 'Partner organizations', value: '25+' }
   ]
 
   const achievements = [
     {
-      title: 'Accredited University',
-      description: 'Recognized by international education bodies with highest accreditation status.'
+      title: 'Established academic reputation',
+      description: 'Ingush State University is recognized as one of the leading higher education institutions in the region.'
     },
     {
-      title: 'Modern Facilities',
-      description: 'State-of-the-art laboratories, libraries, and research centers.'
+      title: 'Modern facilities',
+      description: 'The university combines classrooms, laboratories, libraries, and digital learning spaces.'
     },
     {
-      title: 'Expert Faculty',
-      description: 'Experienced professionals with advanced degrees from leading institutions.'
+      title: 'Qualified faculty',
+      description: 'Experienced lecturers and researchers guide students through academic and professional development.'
     },
     {
-      title: 'Global Network',
-      description: 'Strong connections with universities and organizations worldwide.'
+      title: 'Academic cooperation',
+      description: 'The university maintains partnerships with educational and research organizations across the region.'
     }
   ]
 
   const timeline = [
-    { year: '1994', event: 'University Founded', description: 'Establishment of Ingush State University' },
-    { year: '2000', event: 'Expansion', description: 'Opened new faculties and research centers' },
-    { year: '2010', event: 'Accreditation', description: 'Received international accreditation' },
-    { year: '2020', event: 'Modernization', description: 'Digital transformation and new campus facilities' },
-    { year: '2026', event: 'Excellence', description: 'Leading educational institution in the region' }
+    { year: '1994', event: 'University founded', description: 'Ingush State University began its academic mission.' },
+    { year: '2000', event: 'Institutional growth', description: 'New faculties and academic directions were introduced.' },
+    { year: '2010', event: 'Educational development', description: 'The university expanded its research and teaching capacity.' },
+    { year: '2020', event: 'Digital modernization', description: 'Online services and learning infrastructure were strengthened.' },
+    { year: '2026', event: 'Current stage', description: 'The university continues to develop as a regional center of higher education.' }
   ]
 
   return (
@@ -43,7 +43,7 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-4 text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-6">About Ingush State University</h1>
           <p className="text-gray-300 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto">
-            A premier institution of higher education dedicated to excellence, innovation, and transforming lives through quality education and research.
+            Ingush State University provides higher education, research, and student support through a broad range of academic programs and institutional services.
           </p>
         </div>
       </section>
@@ -76,13 +76,13 @@ const AboutUs = () => {
             <div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 mb-4 sm:mb-8">Our Story</h2>
               <p className="text-gray-600 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 leading-relaxed">
-                Ingush State University was founded in 1994 with a vision to provide world-class education and foster intellectual growth. Over the past three decades, we have established ourselves as a leading educational institution in the region.
+                Ingush State University was founded in 1994 and has grown into a multifaceted educational institution serving students, faculty, and the wider community.
               </p>
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                Our commitment to academic excellence, research innovation, and student development has earned us recognition both nationally and internationally. We continue to evolve and adapt to meet the needs of modern education.
+                The university develops academic programs, research initiatives, and student services that support professional growth and regional development.
               </p>
               <p className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed">
-                With state-of-the-art facilities, experienced faculty, and a diverse student body, we create an environment where knowledge flourishes and transformative learning occurs.
+                With established departments, experienced faculty, and a diverse student body, the university maintains a learning environment focused on education and practical skills.
               </p>
             </div>
 
@@ -105,7 +105,7 @@ const AboutUs = () => {
               <Target size={32} className="sm:w-10 sm:h-10 text-blue-600 mb-3 sm:mb-4" />
               <h3 className="text-lg sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Mission</h3>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                To provide accessible, high-quality education that develops knowledgeable, skilled, and ethical professionals prepared to contribute meaningfully to society.
+                To provide accessible education that prepares graduates with academic knowledge, professional skills, and civic responsibility.
               </p>
             </div>
 
@@ -114,7 +114,7 @@ const AboutUs = () => {
               <Zap size={32} className="sm:w-10 sm:h-10 text-indigo-600 mb-3 sm:mb-4" />
               <h3 className="text-lg sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Vision</h3>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                To be a globally recognized center of excellence in education and research, fostering innovation and promoting sustainable development.
+                To remain a leading regional center of higher education and research, supporting innovation and social development.
               </p>
             </div>
 
@@ -123,7 +123,7 @@ const AboutUs = () => {
               <Award size={32} className="sm:w-10 sm:h-10 text-purple-600 mb-3 sm:mb-4" />
               <h3 className="text-lg sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Core Values</h3>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                Excellence, Integrity, Inclusivity, Innovation, and Accountability guide our commitment to transforming lives through education.
+                Academic quality, responsibility, inclusivity, and continuous improvement guide our work across teaching and student support.
               </p>
             </div>
           </div>

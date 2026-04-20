@@ -6,17 +6,17 @@ const EducationalActivity = () => {
   const educationalPrograms = [
     {
       id: 1,
-      title: 'Additional vocational education',
-      description: 'Professional development and skill enhancement programs designed for working professionals and students seeking specialized credentials.',
+      title: 'Continuing education',
+      description: 'Short courses and professional development opportunities for specialists, employees, and graduates seeking additional qualifications.',
       icon: Award,
-      sections: ['Professional Certification', 'Skill Development', 'Career Advancement']
+      sections: ['Professional retraining', 'Advanced training', 'Certification programs']
     },
     {
       id: 2,
       title: 'Inclusive education',
-      description: 'Comprehensive support services and adaptations for students with disabilities and special educational needs.',
+      description: 'Support and academic accommodations for students with disabilities and special educational needs.',
       icon: Accessibility,
-      sections: ['Support Services', 'Accessibility', 'Accommodations']
+      sections: ['Support services', 'Accessibility', 'Individual accommodations']
     }
   ]
 
@@ -24,21 +24,21 @@ const EducationalActivity = () => {
     {
       id: 1,
       title: 'Schedule of the educational process',
-      description: 'Complete academic calendar including semester dates, holidays, and important academic deadlines.',
+      description: 'Academic calendar for semesters, holidays, exam periods, and major institutional deadlines.',
       icon: Calendar,
       link: '#'
     },
     {
       id: 2,
       title: 'Schedule of classes',
-      description: 'Detailed class timetables for all programs, faculties, and departments with room assignments.',
+      description: 'Class timetables for faculties and study groups, updated according to the academic schedule.',
       icon: ClipboardList,
       link: '#'
     },
     {
       id: 3,
       title: 'Exam schedule',
-      description: 'Examination dates and times for all courses across all academic programs and levels.',
+      description: 'Examination dates and times for academic programs at all study levels.',
       icon: BookOpen,
       link: '#'
     }
@@ -48,25 +48,25 @@ const EducationalActivity = () => {
     {
       category: 'Academic Programs',
       items: [
-        { name: 'Bachelor Degree Programs', hours: '4 Years' },
-        { name: 'Master Degree Programs', hours: '2 Years' },
-        { name: 'Postgraduate Research', hours: '3+ Years' }
+        { name: 'Bachelor programs', hours: 'According to educational standards' },
+        { name: 'Master programs', hours: 'According to educational standards' },
+        { name: 'Postgraduate studies', hours: 'According to educational standards' }
       ]
     },
     {
       category: 'Student Activities',
       items: [
-        { name: 'Seminars and Workshops', hours: 'Regular' },
-        { name: 'Research Projects', hours: 'Ongoing' },
-        { name: 'Cultural Events', hours: 'Monthly' }
+        { name: 'Seminars and workshops', hours: 'According to approved plans' },
+        { name: 'Research projects', hours: 'According to approved plans' },
+        { name: 'Cultural events', hours: 'According to approved plans' }
       ]
     },
     {
       category: 'Support Services',
       items: [
-        { name: 'Academic Counseling', hours: 'By Appointment' },
-        { name: 'Career Guidance', hours: 'By Appointment' },
-        { name: 'Mental Health Services', hours: 'Regular' }
+        { name: 'Academic counseling', hours: 'According to service schedule' },
+        { name: 'Career guidance', hours: 'According to service schedule' },
+        { name: 'Student support services', hours: 'According to service schedule' }
       ]
     }
   ]
@@ -156,7 +156,7 @@ const EducationalActivity = () => {
                     </p>
 
                     <div className="mt-4 flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition">
-                      <span>Download</span>
+                      <span>Open</span>
                       <ChevronRight size={18} className="ml-2" />
                     </div>
                   </div>
@@ -196,7 +196,7 @@ const EducationalActivity = () => {
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Educational Quality Assurance</h2>
           
           <p className="text-gray-600 mb-6">
-            Ingush State University maintains rigorous standards for educational activities through:
+            Ingush State University maintains standards for educational activities through:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -205,8 +205,8 @@ const EducationalActivity = () => {
                 <span className="text-blue-600 font-bold">✓</span>
               </div>
               <div>
-                <h4 className="font-bold text-gray-800 mb-1">Regular Curriculum Review</h4>
-                <p className="text-gray-600 text-sm">Continuous evaluation and updates to course content and teaching methods</p>
+                <h4 className="font-bold text-gray-800 mb-1">Curriculum review</h4>
+                <p className="text-gray-600 text-sm">Ongoing evaluation and updating of course content and teaching methods</p>
               </div>
             </div>
 
@@ -215,8 +215,8 @@ const EducationalActivity = () => {
                 <span className="text-blue-600 font-bold">✓</span>
               </div>
               <div>
-                <h4 className="font-bold text-gray-800 mb-1">Faculty Development</h4>
-                <p className="text-gray-600 text-sm">Ongoing training and professional development for instructors</p>
+                <h4 className="font-bold text-gray-800 mb-1">Faculty development</h4>
+                <p className="text-gray-600 text-sm">Professional development and training for instructors</p>
               </div>
             </div>
 
@@ -225,8 +225,8 @@ const EducationalActivity = () => {
                 <span className="text-blue-600 font-bold">✓</span>
               </div>
               <div>
-                <h4 className="font-bold text-gray-800 mb-1">Student Assessment</h4>
-                <p className="text-gray-600 text-sm">Comprehensive evaluation methods to measure learning outcomes</p>
+                <h4 className="font-bold text-gray-800 mb-1">Student assessment</h4>
+                <p className="text-gray-600 text-sm">Assessment methods used to evaluate learning outcomes</p>
               </div>
             </div>
 
@@ -235,8 +235,8 @@ const EducationalActivity = () => {
                 <span className="text-blue-600 font-bold">✓</span>
               </div>
               <div>
-                <h4 className="font-bold text-gray-800 mb-1">Institutional Accreditation</h4>
-                <p className="text-gray-600 text-sm">Compliance with national and international education standards</p>
+                <h4 className="font-bold text-gray-800 mb-1">Institutional compliance</h4>
+                <p className="text-gray-600 text-sm">Compliance with applicable national education standards</p>
               </div>
             </div>
           </div>
@@ -248,7 +248,7 @@ const EducationalActivity = () => {
             <BookOpen size={32} className="text-blue-600 mb-3" />
             <h3 className="text-lg font-bold text-gray-800 mb-2">Learning Resources</h3>
             <p className="text-gray-600 text-sm mb-4">
-              Access our comprehensive library of learning materials and resources.
+              Access the university's learning materials and reference resources.
             </p>
             <button className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
               Access Resources →
@@ -259,7 +259,7 @@ const EducationalActivity = () => {
             <Users size={32} className="text-blue-600 mb-3" />
             <h3 className="text-lg font-bold text-gray-800 mb-2">Student Support</h3>
             <p className="text-gray-600 text-sm mb-4">
-              Get help from our academic advisors and support services.
+              Get help from academic advisors and support services.
             </p>
             <button className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
               Contact Support →
@@ -282,7 +282,7 @@ const EducationalActivity = () => {
         <div className="mt-16 bg-linear-to-r from-blue-900 to-blue-700 rounded-lg p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Questions about our educational programs?</h2>
           <p className="text-blue-100 text-lg mb-8">
-            Our educational advisors are ready to help you understand our programs and opportunities.
+            Our educational advisors are ready to help you understand university programs and opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -13,22 +13,22 @@ const Home = () => {
   const carouselSlides = [
     {
       id: 1,
-      title: "ШКОЛА ФЕРМЕРА",
-      subtitle: "In April, a new enrollment for the Farmer's School in Ingushetia will open.",
+      title: "INGUSH STATE UNIVERSITY",
+      subtitle: "Admissions, academic programs, and official university updates in one place.",
       image: "/image1.jpg",
       bgColor: "bg-gradient-to-r from-yellow-300 via-lime-200 to-green-300"
     },
     {
       id: 2,
-      title: "EDUCATIONAL PROGRAMS",
-      subtitle: "Explore our comprehensive educational programs designed for your future.",
+      title: "ACADEMIC PROGRAMS",
+      subtitle: "Discover undergraduate, graduate, and continuing education opportunities.",
       image: "/image2.jpg",
       bgColor: "bg-gradient-to-r from-blue-300 via-indigo-200 to-purple-300"
     },
     {
       id: 3,
-      title: "EXPLORE OUR PROGRAMS",
-      subtitle: "Discover a wide range of educational opportunities at Ingush State University.",
+      title: "UNIVERSITY NEWS",
+      subtitle: "Follow institutional events, announcements, and campus life updates.",
       image: "/image3.jpg",
       bgColor: "bg-gradient-to-r from-blue-300 via-indigo-200 to-purple-300"
     }
@@ -36,12 +36,12 @@ const Home = () => {
 
   // News data
   const newsItems = [
-    { id: 1, title: "ANNOUNCEMENT", category: "ANNOUNCEMENT", icon: "/anouncement.jpg" },
-    { id: 2, title: "ANNOUNCEMENT", category: "ANNOUNCEMENT", icon: "/anouncement.jpg" },
-    { id: 3, title: "ANNOUNCEMENT", category: "ANNOUNCEMENT", icon: "/image3.jpg" },
-    { id: 4, title: "ANNOUNCEMENT", category: "ANNOUNCEMENT", icon: "/anouncement.jpg" },
-    { id: 5, title: "ANNOUNCEMENT", category: "ANNOUNCEMENT", icon: "/anouncement.jpg" },
-    { id: 6, title: "ANNOUNCEMENT", category: "ANNOUNCEMENT", icon: "/image2.jpg" }
+    { id: 1, title: "Admissions updates", category: "Admissions", icon: "/anouncement.jpg" },
+    { id: 2, title: "Academic calendar", category: "Education", icon: "/anouncement.jpg" },
+    { id: 3, title: "University events", category: "Campus life", icon: "/image3.jpg" },
+    { id: 4, title: "Faculty notices", category: "Faculty", icon: "/anouncement.jpg" },
+    { id: 5, title: "Research news", category: "Research", icon: "/anouncement.jpg" },
+    { id: 6, title: "Student resources", category: "Support", icon: "/image2.jpg" }
   ]
 
   // Quick links data
@@ -50,7 +50,7 @@ const Home = () => {
       id: 1,
       icon: Users,
       title: "For applicants",
-      links: ["Admissions Committee", "Documents and certificates"],
+      links: ["Admissions Committee", "Required documents"],
       bgColor: "bg-gradient-to-br from-blue-50 to-blue-100",
       accentColor: "text-blue-600",
       url: "/applicant"
@@ -59,7 +59,7 @@ const Home = () => {
       id: 2,
       icon: BookOpen,
       title: "For students",
-      links: ["Educational materials", "Electronic information and educational environment of IngSU"],
+      links: ["Educational materials", "Digital learning environment"],
       bgColor: "bg-gradient-to-br from-green-50 to-green-100",
       accentColor: "text-green-600",
       url: "/sveden/education"
@@ -67,8 +67,8 @@ const Home = () => {
     {
       id: 3,
       icon: GraduationCap,
-      title: "To graduates",
-      links: ["Employment Assistance Center"],
+      title: "For graduates",
+      links: ["Career support and alumni services"],
       bgColor: "bg-gradient-to-br from-purple-50 to-purple-100",
       accentColor: "text-purple-600"
     }
@@ -224,7 +224,7 @@ const Home = () => {
 
                       {/* News Content */}
                       <div className="p-0 flex-1 flex flex-col justify-center border-t border-gray-200">
-                        <p className="text-center text-sm font-bold text-gray-700 uppercase tracking-wider">Announcement</p>
+                        <p className="text-center text-sm font-bold text-gray-700 uppercase tracking-wider">{news.category}</p>
                       </div>
                     </div>
                   </div>
@@ -301,12 +301,10 @@ const Home = () => {
                   </ul>
 
                   {/* Read More Button */}
-                  <button className="w-full bg-linear-to-r from-blue-600 to-blue-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full flex items-center justify-center gap-2 text-sm sm:text-base">
-                    <Link to={link.url || "#"} className="w-full h-full">
-                      Read more
-                    </Link>
+                  <Link to={link.url || "#"} className="w-full bg-linear-to-r from-blue-600 to-blue-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full flex items-center justify-center gap-2 text-sm sm:text-base">
+                    Read more
                     <ArrowRight size={14} className="sm:w-4 sm:h-4" />
-                  </button>
+                  </Link>
                 </div>
               )
             })}

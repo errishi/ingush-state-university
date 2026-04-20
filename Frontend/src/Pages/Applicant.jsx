@@ -5,172 +5,172 @@ const Applicant = () => {
   const [expandedFaq, setExpandedFaq] = useState(null)
 
   const stats = [
-    { label: 'Students Enrolled', value: '5,000+', icon: Users },
-    { label: 'Admission Rate', value: '45%', icon: CheckCircle },
-    { label: 'Scholarship Recipients', value: '800+', icon: Award },
-    { label: 'Programs Offered', value: '50+', icon: FileText }
+    { label: 'Students enrolled', value: 'Official data', icon: Users },
+    { label: 'Study directions', value: 'Official data', icon: CheckCircle },
+    { label: 'Scholarship recipients', value: 'Official data', icon: Award },
+    { label: 'Programs offered', value: 'Official data', icon: FileText }
   ]
 
   const requirements = [
     {
       title: 'Secondary Education Certificate',
-      description: 'Valid high school diploma or equivalent qualification'
+      description: 'Valid secondary education certificate or equivalent qualification'
     },
     {
       title: 'Age Requirement',
-      description: 'Minimum 17 years old at the time of admission'
+      description: 'Applicants must meet the age requirements established by the admission rules'
     },
     {
       title: 'Language Proficiency',
-      description: 'Adequate command of Russian language for program delivery'
+      description: 'Adequate command of the Russian language for program instruction'
     },
     {
       title: 'Medical Certificate',
-      description: 'Health clearance from authorized medical institution'
+      description: 'Medical clearance when required by the selected program'
     },
     {
       title: 'Entrance Examination',
-      description: 'Successful completion of subject-specific entrance tests'
+      description: 'Successful completion of the relevant entrance examinations'
     },
     {
       title: 'Documentation',
-      description: 'Complete all required official documents and transcripts'
+      description: 'Submission of all required official documents and records'
     }
   ]
 
   const applicationSteps = [
     {
       step: 1,
-      title: 'Submit Application',
-      description: 'Fill out the online application form with your personal and academic information'
+      title: 'Submit application',
+      description: 'Complete the admission application form with personal and academic details'
     },
     {
       step: 2,
-      title: 'Upload Documents',
-      description: 'Submit scanned copies of required documents (diploma, certificates, ID)'
+      title: 'Upload documents',
+      description: 'Provide scanned copies of the required documents and certificates'
     },
     {
       step: 3,
-      title: 'Take Entrance Exam',
-      description: 'Participate in online or on-campus entrance examinations'
+      title: 'Take entrance exams',
+      description: 'Participate in entrance examinations for the selected program'
     },
     {
       step: 4,
       title: 'Interview',
-      description: 'Attend mandatory interview with faculty representatives'
+      description: 'Attend an interview if it is required by the selected direction of study'
     },
     {
       step: 5,
-      title: 'Receive Admission Decision',
-      description: 'Get your acceptance or rejection decision within 2-3 weeks'
+      title: 'Receive decision',
+      description: 'Review the admission decision published by the university'
     },
     {
       step: 6,
-      title: 'Confirm Enrollment',
-      description: 'Complete enrollment procedures and pay registration fee'
+      title: 'Confirm enrollment',
+      description: 'Complete enrollment procedures within the established deadlines'
     }
   ]
 
   const programs = [
     {
       category: 'Undergraduate',
-      duration: '4 Years',
+      duration: 'According to federal standards',
       degrees: [
-        'Bachelor of Science',
-        'Bachelor of Arts',
-        'Bachelor of Engineering',
-        'Bachelor of Business Administration'
+        'Bachelor programs',
+        'Full-time study',
+        'Part-time study',
+        'Specialist programs where applicable'
       ]
     },
     {
-      category: 'Postgraduate',
-      duration: '2 Years',
+      category: 'Master programs',
+      duration: 'According to federal standards',
       degrees: [
-        'Master of Science',
-        'Master of Arts',
-        'Master of Engineering',
-        'Master of Business Administration'
+        'Master programs',
+        'Advanced academic training',
+        'Research-oriented study',
+        'Professional specialization'
       ]
     },
     {
-      category: 'Professional Certificates',
-      duration: '6-12 Months',
+      category: 'Additional education',
+      duration: 'According to program documentation',
       degrees: [
-        'Advanced Professional Certifications',
-        'Specialized Skill Development',
-        'Industry-Focused Training',
-        'Language Proficiency Programs'
+        'Professional retraining',
+        'Advanced training',
+        'Short-term courses',
+        'Skill development programs'
       ]
     }
   ]
 
   const scholarships = [
     {
-      name: 'Merit-Based Scholarship',
-      amount: 'Up to 100% tuition',
-      criteria: 'Academic excellence and entrance exam performance',
-      deadline: 'Rolling applications'
+      name: 'Academic scholarship',
+      amount: 'According to university policy',
+      criteria: 'Academic performance and admission results',
+      deadline: 'According to official orders'
     },
     {
-      name: 'Need-Based Assistance',
-      amount: 'Up to 75% tuition',
-      criteria: 'Demonstrated financial need with strong academics',
-      deadline: 'Before enrollment'
+      name: 'Social support',
+      amount: 'According to eligibility',
+      criteria: 'Confirmed right to support measures',
+      deadline: 'According to official orders'
     },
     {
-      name: 'Sports Scholarship',
-      amount: 'Up to 80% tuition',
-      criteria: 'Exceptional athletic achievement',
-      deadline: 'February 28, 2026'
+      name: 'Targeted support',
+      amount: 'According to available quotas',
+      criteria: 'Target admission or partner organization support',
+      deadline: 'According to official orders'
     },
     {
-      name: 'Regional Development Grant',
-      amount: 'Up to 60% tuition',
-      criteria: 'Students from underserved regions',
-      deadline: 'March 31, 2026'
+      name: 'Additional support',
+      amount: 'Varies by program',
+      criteria: 'Students meeting the university criteria',
+      deadline: 'According to official orders'
     }
   ]
 
   const importantDates = [
-    { event: 'Application Period Opens', date: 'January 1, 2026' },
-    { event: 'Application Deadline', date: 'March 31, 2026' },
-    { event: 'Entrance Examinations', date: 'April 15-30, 2026' },
-    { event: 'Interview (Selected Candidates)', date: 'May 1-15, 2026' },
-    { event: 'Results Announcement', date: 'May 25, 2026' },
-    { event: 'Enrollment Deadline', date: 'June 15, 2026' },
-    { event: 'Classes Begin', date: 'September 1, 2026' }
+    { event: 'Application period opens', date: 'According to the admission campaign' },
+    { event: 'Application deadline', date: 'According to the admission schedule' },
+    { event: 'Entrance examinations', date: 'According to the admission schedule' },
+    { event: 'Interview for selected candidates', date: 'According to the admission schedule' },
+    { event: 'Results announcement', date: 'According to the admission schedule' },
+    { event: 'Enrollment deadline', date: 'According to the admission schedule' },
+    { event: 'Classes begin', date: 'According to the academic calendar' }
   ]
 
   const faqs = [
     {
       id: 1,
-      question: 'What is the application fee?',
-      answer: 'The application fee is ₹2,500 (approximately $30 USD) and is non-refundable. This covers the cost of processing your application and conducting entrance examinations.'
+      question: 'What documents are required?',
+      answer: 'Applicants usually provide an identity document, education certificate, application form, photographs, and any additional documents required by the selected program.'
     },
     {
       id: 2,
       question: 'Can I apply for multiple programs?',
-      answer: 'Yes, applicants can apply for up to 3 different programs by paying the application fee separately for each. However, applicants must take entrance exams for each program. You can prioritize your choices.'
+      answer: 'Applicants may submit applications for several study directions if this is allowed by the admission rules for the current campaign.'
     },
     {
       id: 3,
-      question: 'Are entrance exams conducted in English?',
-      answer: 'Entrance exams are primarily in Russian language. However, we offer support and some programs may have English-medium options. Please check with your specific program for details.'
+      question: 'What language are the entrance exams in?',
+      answer: 'Entrance examinations are primarily conducted in Russian. Program-specific requirements are determined by the university.'
     },
     {
       id: 4,
-      question: 'What is the average acceptance rate?',
-      answer: 'Our average acceptance rate is around 45% across all programs. However, this varies by program - competitive programs like Medicine have lower acceptance rates (25-30%), while other programs may have higher acceptance rates.'
+      question: 'How are admission results published?',
+      answer: 'Admission results are published in accordance with the university admission schedule and official procedures.'
     },
     {
       id: 5,
-      question: 'Do you offer scholarships to international students?',
-      answer: 'Yes, we offer merit-based and need-based scholarships to both domestic and international students. International students are also eligible for regional development grants and specific international student scholarships.'
+      question: 'Is support available for students?',
+      answer: 'Yes, the university provides academic guidance and support services to help students during their studies.'
     },
     {
       id: 6,
-      question: 'What if I don\'t meet all requirements?',
-      answer: 'If you are a strong candidate in some areas but lack certain qualifications, you may be eligible for provisional admission or foundation programs. Please contact our admissions office for individual consideration.'
+      question: 'What if I do not meet all requirements?',
+      answer: 'If an applicant does not meet a specific requirement, the admission office should be contacted for clarification regarding available options.'
     }
   ]
 
@@ -182,7 +182,7 @@ const Applicant = () => {
           <div className="flex items-center gap-2 text-gray-600">
             <a href="/" className="text-blue-600 hover:text-blue-700 font-medium">Ingush State University</a>
             <ChevronRight size={18} className="text-gray-400" />
-            <span className="text-gray-400">For Applicants</span>
+            <span className="text-gray-400">Applicant information</span>
           </div>
         </div>
       </div>
@@ -190,9 +190,9 @@ const Applicant = () => {
       {/* Hero Section */}
       <section className="bg-linear-to-r from-blue-900 to-blue-700 py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-6">Welcome Future Students</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-6">Applicant information</h1>
           <p className="text-blue-100 text-xl max-w-3xl mx-auto">
-            Join thousands of successful students at Ingush State University. Discover programs, requirements, and start your academic journey today.
+            Review admission requirements, application steps, and program information for Ingush State University.
           </p>
         </div>
       </section>
@@ -286,7 +286,7 @@ const Applicant = () => {
       {/* Scholarships Section */}
       <section id="scholarships" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 text-center mb-8 sm:mb-16">Available Scholarships</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 text-center mb-8 sm:mb-16">Available Support</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {scholarships.map((scholarship, index) => (
@@ -315,7 +315,7 @@ const Applicant = () => {
       {/* Important Dates */}
       <section id="dates" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 text-center mb-8 sm:mb-16">Important Dates 2026</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 text-center mb-8 sm:mb-16">Important Dates</h2>
           
           <div className="max-w-3xl mx-auto">
             <div className="space-y-4">
@@ -365,16 +365,16 @@ const Applicant = () => {
       {/* Contact & CTA Section */}
       <section className="py-16 bg-linear-to-r from-blue-900 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3 sm:mb-6">Ready to Apply?</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3 sm:mb-6">Ready to apply?</h2>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            Have questions? Our admissions team is ready to help you with any inquiries about programs, requirements, or scholarships.
+            Have questions? The admissions team can help with programs, requirements, and enrollment steps.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-white">
               <MapPin size={32} className="mx-auto mb-3" />
               <p className="font-semibold mb-1">Visit Campus</p>
-              <p className="text-blue-100 text-sm">Millionschikova Street, Dom13K1<br/>Moscow - Russia</p>
+              <p className="text-blue-100 text-sm">Millionschikova Street, Dom13K1<br/>Moscow, Russia</p>
             </div>
             <div className="text-white">
               <Calendar size={32} className="mx-auto mb-3" />

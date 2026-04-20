@@ -40,7 +40,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
                 <span className="shrink-0 mt-1 text-lg">📍</span>
-                <span>Millionschikova Street, Dom13K1. Moscow - Russia</span>
+                <span>Millionschikova Street, Dom13K1, Moscow, Russia</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-lg">📞</span>
