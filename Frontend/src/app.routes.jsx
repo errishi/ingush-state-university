@@ -10,6 +10,8 @@ import NotFound from "./Pages/NotFound";
 import InformationForApplicants from "./Pages/InformationForApplicants";
 import EducationalActivity from "./Pages/EducationalActivity";
 import SearchResults from "./Pages/SearchResults";
+import TestCenter from "./Pages/TestCenter";
+import Education from "./Pages/Education";
 
 const router = createBrowserRouter([
     {
@@ -51,6 +53,14 @@ const router = createBrowserRouter([
             {
                 path: "/search",
                 element: <SearchResults />
+            },
+            {
+                path: "/test-center",
+                element: <TestCenter />
+            },
+            {
+                path: "/sveden/education",
+                element: <Education />
             },
             {
                 path: "/*",

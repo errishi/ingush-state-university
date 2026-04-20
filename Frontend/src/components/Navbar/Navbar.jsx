@@ -43,8 +43,8 @@ const Navbar = () => {
   }
 
   const topNavLinks = [
-    { label: 'TESTING CENTER', href: '#' },
-    { label: 'EIOS', href: '#' },
+    { label: 'TESTING CENTER', href: '/test-center' },
+    { label: 'EIOS', href: '/structure' },
     { label: 'USEFUL INFORMATION', href: '/information-for-applicants' },
     { label: 'EDUCATIONAL ACTIVITIES', href: '/educational-activity' },
     { label: 'CONTACTS', href: '/contact-us' }
@@ -142,11 +142,11 @@ const Navbar = () => {
 
       {/* University Banner */}
       <div className="bg-linear-to-r from-blue-800 to-blue-800">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-8 place-self-center">
           <div className="flex flex-col sm:flex-row justify-center sm:justify-start items-center gap-4 sm:gap-8">
             {/* Logo */}
             <Link to="/" className="shrink-0">
-              <img src="logo.svg" className='w-12 h-12 sm:w-20 lg:w-32 sm:h-20 lg:h-32' alt="logo" />
+              <img src="/logo.svg" className='w-12 h-12 sm:w-20 lg:w-32 sm:h-20 lg:h-32' alt="logo" />
             </Link>
 
             {/* University Info */}

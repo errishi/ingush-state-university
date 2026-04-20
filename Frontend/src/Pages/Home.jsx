@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Users, BookOpen, GraduationCap, Building2, ArrowRight } from 'lucide-react'
 import ImageSection1 from '../components/Home/ImageSection1'
+import ImageSection2 from '../components/Home/ImageSection2'
+import { Link } from 'react-router'
 
 const Home = () => {
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0)
@@ -49,7 +51,8 @@ const Home = () => {
       title: "For applicants",
       links: ["Admissions Committee", "Documents and certificates"],
       bgColor: "bg-gradient-to-br from-blue-50 to-blue-100",
-      accentColor: "text-blue-600"
+      accentColor: "text-blue-600",
+      url: "/applicant"
     },
     {
       id: 2,
@@ -57,7 +60,8 @@ const Home = () => {
       title: "For students",
       links: ["Educational materials", "Electronic information and educational environment of IngSU"],
       bgColor: "bg-gradient-to-br from-green-50 to-green-100",
-      accentColor: "text-green-600"
+      accentColor: "text-green-600",
+      url: "/sveden/education"
     },
     {
       id: 3,
@@ -297,7 +301,9 @@ const Home = () => {
 
                   {/* Read More Button */}
                   <button className="w-full bg-linear-to-r from-blue-600 to-blue-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full flex items-center justify-center gap-2 text-sm sm:text-base">
-                    Read more
+                    <Link to={link.url || "#"} className="w-full h-full">
+                      Read more
+                    </Link>
                     <ArrowRight size={14} className="sm:w-4 sm:h-4" />
                   </button>
                 </div>
@@ -308,6 +314,7 @@ const Home = () => {
       </section>
 
       <ImageSection1 />
+      <ImageSection2 />
     </div>
   )
 }
